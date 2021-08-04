@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "b66f3a9f-ef2e-4cc5-8c19-fdd13378dd70",
+		"name": "foodieapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "abc",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/login?username=abc&password=asdasd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "abc"
+						},
+						{
+							"key": "password",
+							"value": "asdasd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Userregister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"sri\",\n    \"password\": \"1234566\",\n    \"firstname\" : \"BV\",\n    \"lastname\" : \"Krishna\",\n    \"email\" : \"sk@gmail.com\",\n    \"address\" : \"vijayawada Andhra Pradesh\",\n    \"phone\": \"1234567890\",\n    \"merchant\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/userregister",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restuarantregister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"kamal1234\",\n    \"password\" : \"foodieapp123\",\n    \"resturantname\" : \"Dolphin\",\n    \"category\" : \"Cafe\",\n    \"location\" : \"Hitech City Hyderabad\",\n    \"contactdetails\" : \"9988774455\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registerRestuarant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registerRestuarant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resturantname\" : \"Dolphin\",\n    \"dishtype\" : \"Veg\",\n    \"cusine\" : \"Chinese\",\n    \"dishname\" : \"Noodles\",\n    \"dishprice\" : \"257\",\n    \"description\" : \"Veg Noodles Served with Hot Sauce\",\n    \"availabletime\" : \"6:00 PM to 11:00 PM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addDish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addDish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restuarantname\" : \"Dolphin\",\n    \"username\" : \"Sri Krishna\",\n    \"productdetails\" : \"1. Panner Fried Rice, 2. Rajma Chawal, 3. Panner Butter Masala\",\n    \"totalvalue\" : \"1255\",\n    \"orderstaus\" : \"In progress\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restuarantname\" : \"Dolphin\",\n    \"username\" : \"Sri Krishna\",\n    \"feedbackdata\" : \"Very good Restuarant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/feedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
